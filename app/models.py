@@ -34,7 +34,11 @@ class Item(models.Model):
         verbose_name='登録日',
         auto_now_add=True
     )
-
+    image = models.ImageField(
+        upload_to='photos/',
+        verbose_name='图片',
+        blank=True,
+        null=True)
     # 管理サイト上の表示設定
     def __str__(self):
         return self.name
@@ -42,3 +46,5 @@ class Item(models.Model):
     class Meta:
         verbose_name = 'アイテム'
         verbose_name_plural = 'アイテム'
+
+

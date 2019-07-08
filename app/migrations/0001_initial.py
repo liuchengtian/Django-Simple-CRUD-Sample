@@ -21,10 +21,11 @@ class Migration(migrations.Migration):
                 ('sex', models.IntegerField(choices=[(1, '男性'), (2, '女性')], default=1, verbose_name='性別')),
                 ('memo', models.TextField(blank=True, max_length=300, null=True, verbose_name='備考')),
                 ('created_at', models.DateTimeField(auto_now_add=True, verbose_name='登録日')),
+                ('image', models.ImageField(upload_to='photos/',blank=True,null=True, verbose_name='图片')),
             ],
             options={
                 'verbose_name': 'アイテム',
-                'verbose_name_plural': 'アイテム',
+                'verbose_name_plural': 'アイテムs',
             },
         ),
     ]
